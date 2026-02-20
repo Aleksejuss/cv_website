@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Professional CV website">
-  <title>CV Website</title>
+  <meta name="description" content="Aleksejus Sosidko - Senior Data Scientist and AI specialist.">
+  <title>Aleksejus Sosidko | Data Scientist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
   <script defer src="scripts/app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page-atmosphere" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
     <div class="header-inner">
-      <a class="brand" href="#top" aria-label="Go to top">CV</a>
+      <a class="brand" href="#top" aria-label="Go to top">AS</a>
       <nav class="main-nav" aria-label="Primary">
         <a href="#about" data-i18n="nav.about">About</a>
         <a href="#experience" data-i18n="nav.experience">Experience</a>
@@ -22,46 +26,46 @@
         <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
-      <button id="lang-toggle" class="lang-toggle" type="button" aria-live="polite">LT</button>
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-live="polite" aria-label="Switch to Lithuanian">LT</button>
     </div>
   </header>
 
   <main id="main-content">
     <section id="hero" class="section hero" aria-labelledby="name"></section>
 
-    <section id="about" class="section" aria-labelledby="about-title">
+    <section id="about" class="section section-panel" aria-labelledby="about-title">
       <h2 id="about-title" data-i18n="sections.about">About</h2>
-      <p id="profile-summary"></p>
+      <p id="profile-summary" class="lead-paragraph"></p>
     </section>
 
-    <section id="experience" class="section" aria-labelledby="experience-title">
+    <section id="experience" class="section section-panel" aria-labelledby="experience-title">
       <h2 id="experience-title" data-i18n="sections.experience">Experience</h2>
       <div id="experience-list" class="stack"></div>
     </section>
 
-    <section id="education" class="section" aria-labelledby="education-title">
+    <section id="education" class="section section-panel" aria-labelledby="education-title">
       <h2 id="education-title" data-i18n="sections.education">Education</h2>
       <div id="education-list" class="stack"></div>
     </section>
 
-    <section id="skills" class="section" aria-labelledby="skills-title">
+    <section id="skills" class="section section-panel" aria-labelledby="skills-title">
       <h2 id="skills-title" data-i18n="sections.skills">Skills</h2>
       <div id="skills-groups" class="skills-grid"></div>
     </section>
 
-    <section id="projects" class="section" aria-labelledby="projects-title">
+    <section id="projects" class="section section-panel" aria-labelledby="projects-title">
       <h2 id="projects-title" data-i18n="sections.projects">Projects</h2>
       <div id="projects-list" class="stack"></div>
     </section>
 
-    <section id="certifications" class="section" aria-labelledby="certifications-title">
+    <section id="certifications" class="section section-panel" aria-labelledby="certifications-title">
       <h2 id="certifications-title" data-i18n="sections.certifications">Certifications</h2>
       <div id="certifications-list" class="stack"></div>
     </section>
 
-    <section id="contact" class="section contact" aria-labelledby="contact-title">
+    <section id="contact" class="section section-panel contact" aria-labelledby="contact-title">
       <h2 id="contact-title" data-i18n="sections.contact">Contact</h2>
-      <p id="contact-text"></p>
+      <p id="contact-text" class="lead-paragraph"></p>
       <div class="contact-actions">
         <a id="email-link" class="button" href="#" data-i18n="actions.email">Email</a>
         <a id="linkedin-link" class="button button-secondary" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -69,5 +73,9 @@
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <p>© <span id="footer-year">2026</span> Aleksejus Sosidko</p>
+  </footer>
 </body>
 </html>

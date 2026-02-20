@@ -284,6 +284,7 @@ async function init() {
   setupLanguageToggle();
   setupSmoothAnchorScrolling();
   setupActiveNavTracking();
+  document.getElementById("footer-year").textContent = String(new Date().getFullYear());
 
   const saved = localStorage.getItem("cv_lang");
   setLanguage(saved === "lt" ? "lt" : "en");
