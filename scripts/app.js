@@ -12,10 +12,15 @@ function get(obj, path) {
 }
 
 async function loadContent() {
-  const [en, lt] = await Promise.all([
-    fetch("content/cv.en.json").then((response) => response.json()),
-    fetch("content/cv.lt.json").then((response) => response.json())
-  ]);
+  const fetchJson = async (url) => {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Unable to load ${url}: ${response.status}`);
+    }
+    return response.json();
+  };
+
+  const [en, lt] = await Promise.all([fetchJson("content/cv.en.json"), fetchJson("content/cv.lt.json")]);
 
   state.data.en = en;
   state.data.lt = lt;
@@ -135,10 +140,12 @@ function renderCertifications(certifications) {
 
 function renderContact(contact) {
   const emailLink = document.getElementById("email-link");
-  emailLink.href = `mailto:${contact.email}`;
+  emailLink.href = contact.email ? `mailto:${contact.email}` : "#";
+  emailLink.setAttribute("aria-disabled", contact.email ? "false" : "true");
 
   const linkedinLink = document.getElementById("linkedin-link");
-  linkedinLink.href = contact.linkedin;
+  linkedinLink.href = contact.linkedin || "#";
+  linkedinLink.setAttribute("aria-disabled", contact.linkedin ? "false" : "true");
 
   document.getElementById("contact-text").textContent = contact.note;
 }
@@ -252,6 +259,11 @@ function updateLanguageControls(content) {
   fillStaticLabels(content);
 }
 
+function renderFatalError(message) {
+  const hero = document.getElementById("hero");
+  hero.innerHTML = `<div class="error-banner"><h1 id="name">Content Load Error</h1><p>${message}</p></div>`;
+}
+
 function render(content) {
   renderHero(content.profile);
   renderExperience(content.experience);
@@ -292,4 +304,5 @@ async function init() {
 
 init().catch((error) => {
   console.error("Could not initialize CV website", error);
+  renderFatalError("The CV content files could not be loaded. Please verify content JSON files.");
 });

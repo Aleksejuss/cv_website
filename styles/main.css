@@ -63,6 +63,14 @@ body {
   padding: 0.5rem 0.75rem;
 }
 
+.noscript-note {
+  margin: 0;
+  padding: 0.7rem 1.1rem;
+  font-size: 0.92rem;
+  background: #fff4ed;
+  border-bottom: 1px solid #e2b497;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -340,6 +348,19 @@ h1 {
   background: #fffdf9;
   color: var(--ink-900);
   border-color: #baaa92;
+}
+
+a[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.error-banner {
+  padding: 1.4rem;
+  border-radius: 1rem;
+  background: rgba(255, 247, 243, 0.95);
+  border: 1px solid #d3a182;
+  box-shadow: var(--shadow);
 }
 
 .site-footer {
