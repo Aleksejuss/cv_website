@@ -1,0 +1,6 @@
+﻿# System
+Thumbs.db
+.DS_Store
+
+# Keep OneDrive source PDF out of repo root if present
+/CV_A_Sosidko.pdf

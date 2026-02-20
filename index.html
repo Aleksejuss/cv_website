@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Professional CV website">
+  <title>CV Website</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script defer src="scripts/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Go to top">CV</a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#education" data-i18n="nav.education">Education</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-live="polite">LT</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="hero" class="section hero" aria-labelledby="name"></section>
+
+    <section id="about" class="section" aria-labelledby="about-title">
+      <h2 id="about-title" data-i18n="sections.about">About</h2>
+      <p id="profile-summary"></p>
+    </section>
+
+    <section id="experience" class="section" aria-labelledby="experience-title">
+      <h2 id="experience-title" data-i18n="sections.experience">Experience</h2>
+      <div id="experience-list" class="stack"></div>
+    </section>
+
+    <section id="education" class="section" aria-labelledby="education-title">
+      <h2 id="education-title" data-i18n="sections.education">Education</h2>
+      <div id="education-list" class="stack"></div>
+    </section>
+
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <h2 id="skills-title" data-i18n="sections.skills">Skills</h2>
+      <div id="skills-groups" class="skills-grid"></div>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title" data-i18n="sections.projects">Projects</h2>
+      <div id="projects-list" class="stack"></div>
+    </section>
+
+    <section id="certifications" class="section" aria-labelledby="certifications-title">
+      <h2 id="certifications-title" data-i18n="sections.certifications">Certifications</h2>
+      <div id="certifications-list" class="stack"></div>
+    </section>
+
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" data-i18n="sections.contact">Contact</h2>
+      <p id="contact-text"></p>
+      <div class="contact-actions">
+        <a id="email-link" class="button" href="#" data-i18n="actions.email">Email</a>
+        <a id="linkedin-link" class="button button-secondary" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a id="cv-download" class="button" href="assets/cv/CV_A_Sosidko.pdf" download data-i18n="actions.downloadCv">Download CV</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
