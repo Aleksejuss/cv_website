@@ -1,0 +1,201 @@
+{
+  "ui": {
+    "nav": {
+      "about": "About",
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "sections": {
+      "about": "About",
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "Skills",
+      "projects": "Projects",
+      "certifications": "Certifications",
+      "contact": "Contact"
+    },
+    "actions": {
+      "email": "Email",
+      "downloadCv": "Download CV"
+    },
+    "labels": {
+      "viewLinkedin": "LinkedIn",
+      "location": "Location"
+    }
+  },
+  "profile": {
+    "name": "Aleksejus Sosidko",
+    "title": "Senior Data Scientist | PhD in Economics",
+    "summary": "Senior Data Scientist experienced in Tabular, NLP, and CV, with proven work in both utilities (ESO) and public registries (Registrų centras). I apply AI to automate business processes—ranging from Mass Outage Forecasting, contractor documentation quality assessment (NLP), and CV-based network data validation, to Document AI solutions for large-scale document ingestion, text extraction, structured information extraction via prompt engineering, and quality/error detection. My skills are complemented by certifications in Generative AI with Large Language Models, AI, Machine Learning, and Deep Learning.",
+    "location": "Vilniaus, Lithuania",
+    "photo": {
+      "src": "assets/profile-placeholder.svg",
+      "alt": "Placeholder portrait for Aleksejus Sosidko"
+    }
+  },
+  "contact": {
+    "email": "a.sosidko@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/aleksejus-sosidko-1ab7591a2",
+    "phone": "+37065864281",
+    "note": "Open to data science and AI roles where I can deliver measurable business impact."
+  },
+  "experience": [
+    {
+      "role": "Senior Data Scientist",
+      "company": "Registrų centras",
+      "period": "October 2024 - Present",
+      "location": "Vilnius, Lithuania",
+      "highlights": [
+        "Lead end-to-end Document AI and LLM initiatives for workflow automation.",
+        "Build ingestion pipelines for PDF, DOCX, scanned images, and archive containers.",
+        "Transform unstructured documents into structured JSON with schema validation.",
+        "Define prompt engineering standards and deterministic normalization rules.",
+        "Run iterative evaluation loops with error analysis and regression checks.",
+        "Implement human-in-the-loop controls for specialist quality assurance."
+      ]
+    },
+    {
+      "role": "Data Scientist",
+      "company": "AB Energijos skirstymo operatorius (ESO)",
+      "period": "March 2021 - August 2024",
+      "location": "Vilnius, Lithuania",
+      "highlights": [
+        "Built and maintained end-to-end ML pipelines for operational decision support.",
+        "Delivered Mass Outage Forecasting models on tabular utility data.",
+        "Built NLP workflows for contractor documentation quality assessment.",
+        "Applied computer vision to validate network data from LV cable cabinet schemes."
+      ]
+    },
+    {
+      "role": "Machine Learning Intern",
+      "company": "Vinted / Kleiderkreisel",
+      "period": "October 2020 - December 2020",
+      "location": "Vilnius, Lithuania",
+      "highlights": [
+        "TODO: Add key internship achievements and impact metrics."
+      ]
+    },
+    {
+      "role": "Data Analyst",
+      "company": "OC VISION",
+      "period": "April 2017 - December 2019",
+      "location": "Lithuania",
+      "highlights": [
+        "Owned reporting and business analysis workflows.",
+        "Improved report clarity and usability for decision-makers.",
+        "Created new reports that supported business go/no-go decisions.",
+        "Mentored teammates on efficient use of MS Excel and Axapta."
+      ]
+    },
+    {
+      "role": "Analyst",
+      "company": "RJF Baltic",
+      "period": "June 2016 - April 2017",
+      "location": "Lithuania",
+      "highlights": [
+        "Delivered reporting, budgeting, and financial analysis.",
+        "Supported cash-flow control and management reporting."
+      ]
+    },
+    {
+      "role": "Economist",
+      "company": "Kelvista",
+      "period": "August 2015 - June 2016",
+      "location": "Lithuania",
+      "highlights": [
+        "Owned budgeting and reporting tasks.",
+        "Created and implemented a project evaluation framework."
+      ]
+    },
+    {
+      "role": "Customer Support Specialist",
+      "company": "Swedbank Lietuvoje",
+      "period": "May 2014 - August 2015",
+      "location": "Lithuania",
+      "highlights": [
+        "Provided support for banking products, loans, pension, and insurance topics."
+      ]
+    },
+    {
+      "role": "Analyst",
+      "company": "RJF Baltic",
+      "period": "May 2014 - August 2015",
+      "location": "Lithuania",
+      "highlights": [
+        "Performed financial analysis and budgeting.",
+        "Created the company budgeting framework from scratch."
+      ]
+    },
+    {
+      "role": "Human Resources Specialist",
+      "company": "RJF Baltic",
+      "period": "January 2013 - May 2014",
+      "location": "Lithuania",
+      "highlights": [
+        "Managed blue-collar recruitment in Lithuania and abroad."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Mykolas Romeris University",
+      "degree": "PhD in Economics",
+      "period": "2017 - 2022",
+      "details": []
+    },
+    {
+      "institution": "Mykolas Romeris University",
+      "degree": "Master's degree in Economics",
+      "period": "2013 - 2015",
+      "details": []
+    }
+  ],
+  "skills": {
+    "technical": [
+      "Computer Vision",
+      "Deep Learning",
+      "Document AI",
+      "Machine Learning",
+      "Machine Learning Algorithms",
+      "Natural Language Processing",
+      "Prompt Engineering"
+    ],
+    "tools": [
+      "Python",
+      "JSON",
+      "Excel",
+      "Axapta"
+    ],
+    "languages": [
+      "Lithuanian",
+      "English"
+    ]
+  },
+  "projects": [
+    {
+      "name": "Mass Outage Forecasting",
+      "summary": "Tabular ML forecasting for utility outage planning and response.",
+      "link": ""
+    },
+    {
+      "name": "Contractor Documentation Quality Assessment",
+      "summary": "NLP solution for document quality checks and process consistency.",
+      "link": ""
+    },
+    {
+      "name": "Network Data Validation from LV Cable Cabinet Schemes",
+      "summary": "Computer vision pipeline to validate network data against source schemes.",
+      "link": ""
+    }
+  ],
+  "certifications": [
+    "Generative AI with Large Language Models",
+    "AI for Everyone",
+    "Deep Learning Specialization",
+    "Machine Learning Specialization",
+    "Artificial Intelligence"
+  ]
+}

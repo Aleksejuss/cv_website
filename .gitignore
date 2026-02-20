@@ -1,6 +1,8 @@
 ﻿# System
 Thumbs.db
 .DS_Store
+__pycache__/
+*.pyc
 
 # Keep OneDrive source PDF out of repo root if present
 /CV_A_Sosidko.pdf

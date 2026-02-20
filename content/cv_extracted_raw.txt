@@ -1,0 +1,156 @@
+ 
+Contact
++37065864281 (Mobile)
+a.sosidko@gmail.com
+www.linkedin.com/in/aleksejus-
+sosidko-1ab7591a2 (LinkedIn)
+Top Skills
+Machine Learning Algorithms
+Deep Learning
+Machine Learning
+Certifications
+Generative AI with Large Language
+Models
+AI for Everyone
+Deep Learning Specialization
+Machine Learning Specialization
+Artificial Intelligence
+Aleksejus Sosidko
+PhD in Economics
+Vilniaus, Lithuania
+Summary
+Senior Data Scientist experienced in Tabular, NLP, and CV, with
+proven work in both utilities (ESO) and public registries (Registrų
+centras). I apply AI to automate business processes—ranging
+from Mass Outage Forecasting, contractor documentation quality
+assessment (NLP), and CV-based network data validation, to
+Document AI solutions for large-scale document ingestion, text
+extraction, structured information extraction via prompt engineering,
+and quality/error detection.
+My skills are complemented by certifications in Generative AI with
+Large Language Models, AI, Machine Learning, and Deep Learning.
+Experience
+Registrų centras
+Senior Data Scientist
+October 2024 - Present (1 year 5 months)
+Vilnius, Vilniaus, Lithuania
+The primary responsibility involves utilizing Artificial Intelligence algorithms to
+automate various document processing workflows.
+LLM:
+- Lead end-to-end LLM initiatives for document understanding and workflow
+automation;
+- Design and maintain ingestion pipelines for multi-format documents (PDF,
+DOCX, scanned images, archive containers);
+- Build extraction workflows that transform unstructured text into structured
+JSON outputs for downstream systems;
+- Develop prompt engineering standards, deterministic normalization rules, and
+schema-based validation logic;
+- Run continuous evaluation loops (error analysis, mismatch review, regression
+checks) and improve extraction quality iteratively;
+ Page 1 of 4
+
+---PAGE---
+
+ 
+- Implement human-in-the-loop controls so specialists retain final decision
+authority while AI accelerates initial assessment and preparation.
+ML:
+- Develop and operate classical ML pipelines for business process automation
+and decision support;
+- Build supervised models for document/email classification, relevance
+detection, and request-type routing;
+- Own the full lifecycle: dataset preparation, feature/label pipeline design,
+training, validation, and production-quality monitoring;
+- Improve model robustness through structured error analysis, and retraining
+cycles.
+- Translate model outputs into actionable operational recommendations for
+business teams.
+AB „Energijos skirstymo operatorius“ (ESO)
+Data Scientist
+March 2021 - August 2024 (3 years 6 months)
+Vilniaus, Lithuania
+The primary responsibility involves utilizing Artificial Intelligence algorithms to
+automate operational workflows and improve decision quality.
+Main Projects:
+- Mass Outage Forecasting (Tabular)
+- Contractor Documentation Quality Assessment (NLP)
+- Network Data Validation From LV Cable Cabinet Schemes (CV)
+Across these projects, I design and maintain end-to-end ML pipelines, from
+data preparation and model development to evaluation, deployment support,
+and continuous performance improvement.
+Vinted / Kleiderkreisel
+Machine Learning Intern
+October 2020 - December 2020 (3 months)
+Vilniaus, Lithuania
+OC VISION
+Data Analyst
+April 2017 - December 2019 (2 years 9 months)
+Lithuania
+ Page 2 of 4
+
+---PAGE---
+
+ 
+Responsabilities:
+- Reporting & Metrics
+- Business Analysis
+- Budgeting
+- Team Support
+Achievements:
+- Upgraded most of the reports, made them more clearly and readable.
+- Created various new reports which helped to accept or decline business
+ideas.
+- Helped team members to be more efficiency working with MS Excel and
+Axapta.
+RJF Baltic
+Analyst
+June 2016 - April 2017 (11 months)
+Lithuania
+Responsabilities:
+- Reporting & Metrics
+- Business & Financial Analysis
+- Budgeting
+- Cash flow Controling
+Kelvista
+Economist
+August 2015 - June 2016 (11 months)
+Lithuania
+Responsabilities:
+- Reporting & Metrics
+- Budgeting
+Achievements:
+-Created, developed and implemented projects evaluation system
+Swedbank Lietuvoje
+Customer Support Specialist
+May 2014 - August 2015 (1 year 4 months)
+Lithuania
+Responsabilities:
+- Daily Products
+ Page 3 of 4
+
+---PAGE---
+
+ 
+- Loans
+- Pension
+- Insurance
+RJF Baltic
+2 years 8 months
+Analyst
+May 2014 - August 2015 (1 year 4 months)
+Lithuania
+Responsabilities:
+- Financial Analysis
+- Budgeting
+Achievements:
+- Created absolutely new company budget from scratch
+Human Resources Specialist
+January 2013 - May 2014 (1 year 5 months)
+Responsabilities:
+- Recruiting working class people in Lithuania and abroad.
+Education
+Mykolas Romeris University
+PhD, Economics · (2017 - 2022)
+Mykolas Romeris University
+Master's degree, Economics · (2013 - 2015)
+ Page 4 of 4

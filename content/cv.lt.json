@@ -1,0 +1,201 @@
+{
+  "ui": {
+    "nav": {
+      "about": "Apie",
+      "experience": "Patirtis",
+      "education": "Išsilavinimas",
+      "skills": "Įgūdžiai",
+      "projects": "Projektai",
+      "contact": "Kontaktai"
+    },
+    "sections": {
+      "about": "Apie",
+      "experience": "Patirtis",
+      "education": "Išsilavinimas",
+      "skills": "Įgūdžiai",
+      "projects": "Projektai",
+      "certifications": "Sertifikatai",
+      "contact": "Kontaktai"
+    },
+    "actions": {
+      "email": "El. paštas",
+      "downloadCv": "Atsisiųsti CV"
+    },
+    "labels": {
+      "viewLinkedin": "LinkedIn",
+      "location": "Vieta"
+    }
+  },
+  "profile": {
+    "name": "Aleksejus Sosidko",
+    "title": "Vyresnysis duomenų mokslininkas | Ekonomikos mokslų daktaras",
+    "summary": "Vyresnysis duomenų mokslininkas, turintis patirties tabulinių duomenų, NLP ir kompiuterinės regos srityse. Kuriu AI sprendimus, kurie automatizuoja procesus, gerina kokybę ir padeda priimti sprendimus energetikos bei viešojo sektoriaus organizacijose.",
+    "location": "Vilniaus, Lithuania",
+    "photo": {
+      "src": "assets/profile-placeholder.svg",
+      "alt": "Placeholder portrait for Aleksejus Sosidko"
+    }
+  },
+  "contact": {
+    "email": "a.sosidko@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/aleksejus-sosidko-1ab7591a2",
+    "phone": "+37065864281",
+    "note": "Atviras duomenų mokslo ir AI pozicijoms, kuriose svarbus aiškus verslo poveikis."
+  },
+  "experience": [
+    {
+      "role": "Vyresnysis duomenų mokslininkas",
+      "company": "Registrų centras",
+      "period": "2024 spalis - dabar",
+      "location": "Vilnius, Lietuva",
+      "highlights": [
+        "Vadovauju Document AI ir LLM iniciatyvoms, skirtoms procesų automatizavimui.",
+        "Kuriu dokumentų įkėlimo srautus PDF, DOCX, skenuotiems vaizdams ir archyvams.",
+        "Nestruktūrizuotą tekstą paverčiu į struktūrizuotą JSON su schemų validacija.",
+        "Diegiu promptų inžinerijos standartus ir deterministines normalizavimo taisykles.",
+        "Vykdau nuolatinius kokybės vertinimo ciklus su klaidų analize.",
+        "Įdiegiu human-in-the-loop kontrolę galutiniam ekspertų patvirtinimui."
+      ]
+    },
+    {
+      "role": "Duomenų mokslininkas",
+      "company": "AB Energijos skirstymo operatorius (ESO)",
+      "period": "2021 kovas - 2024 rugpjūtis",
+      "location": "Vilnius, Lietuva",
+      "highlights": [
+        "Kūriau ir palaikiau pilnus ML sprendimų ciklus operaciniams sprendimams.",
+        "Sukūriau masinių elektros tiekimo sutrikimų prognozavimo modelius.",
+        "Kūriau NLP sprendimus rangovų dokumentacijos kokybės vertinimui.",
+        "Taikiau kompiuterinę regą tinklo duomenų validavimui pagal schemų vaizdus."
+      ]
+    },
+    {
+      "role": "Mašininio mokymosi praktikantas",
+      "company": "Vinted / Kleiderkreisel",
+      "period": "2020 spalis - 2020 gruodis",
+      "location": "Vilnius, Lietuva",
+      "highlights": [
+        "TODO: Papildykite praktikos pasiekimus ir poveikio rodiklius."
+      ]
+    },
+    {
+      "role": "Duomenų analitikas",
+      "company": "OC VISION",
+      "period": "2017 balandis - 2019 gruodis",
+      "location": "Lietuva",
+      "highlights": [
+        "Atsakiau už ataskaitų ruošimą ir verslo analizę.",
+        "Pagerinau ataskaitų aiškumą ir panaudojamumą vadovų sprendimams.",
+        "Sukūriau naujas ataskaitas, padėjusias priimti verslo sprendimus.",
+        "Padėjau komandai efektyviau dirbti su MS Excel ir Axapta."
+      ]
+    },
+    {
+      "role": "Analitikas",
+      "company": "RJF Baltic",
+      "period": "2016 birželis - 2017 balandis",
+      "location": "Lietuva",
+      "highlights": [
+        "Vykdžiau ataskaitų rengimą, biudžetavimą ir finansinę analizę.",
+        "Prisidėjau prie pinigų srautų kontrolės ir valdymo ataskaitų."
+      ]
+    },
+    {
+      "role": "Ekonomistas",
+      "company": "Kelvista",
+      "period": "2015 rugpjūtis - 2016 birželis",
+      "location": "Lietuva",
+      "highlights": [
+        "Atsakiau už biudžetavimo ir ataskaitų procesus.",
+        "Sukūriau ir įdiegiau projektų vertinimo sistemą."
+      ]
+    },
+    {
+      "role": "Klientų aptarnavimo specialistas",
+      "company": "Swedbank Lietuvoje",
+      "period": "2014 gegužė - 2015 rugpjūtis",
+      "location": "Lietuva",
+      "highlights": [
+        "Konsultavau kasdienių bankinių paslaugų, paskolų, pensijų ir draudimo klausimais."
+      ]
+    },
+    {
+      "role": "Analitikas",
+      "company": "RJF Baltic",
+      "period": "2014 gegužė - 2015 rugpjūtis",
+      "location": "Lietuva",
+      "highlights": [
+        "Atlikau finansinę analizę ir biudžetavimą.",
+        "Sukūriau įmonės biudžeto sistemą nuo nulio."
+      ]
+    },
+    {
+      "role": "Personalo specialistas",
+      "company": "RJF Baltic",
+      "period": "2013 sausis - 2014 gegužė",
+      "location": "Lietuva",
+      "highlights": [
+        "Organizavau darbininkų atranką Lietuvoje ir užsienyje."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Mykolo Romerio universitetas",
+      "degree": "Ekonomikos mokslų daktaras",
+      "period": "2017 - 2022",
+      "details": []
+    },
+    {
+      "institution": "Mykolo Romerio universitetas",
+      "degree": "Ekonomikos magistras",
+      "period": "2013 - 2015",
+      "details": []
+    }
+  ],
+  "skills": {
+    "technical": [
+      "Computer Vision",
+      "Deep Learning",
+      "Document AI",
+      "Machine Learning",
+      "Machine Learning Algorithms",
+      "Natural Language Processing",
+      "Prompt Engineering"
+    ],
+    "tools": [
+      "Python",
+      "JSON",
+      "Excel",
+      "Axapta"
+    ],
+    "languages": [
+      "Lietuvių",
+      "Anglų"
+    ]
+  },
+  "projects": [
+    {
+      "name": "Masinių sutrikimų prognozavimas",
+      "summary": "Tabulinių duomenų ML modeliai elektros tiekimo sutrikimų planavimui ir reagavimui.",
+      "link": ""
+    },
+    {
+      "name": "Rangovų dokumentacijos kokybės vertinimas",
+      "summary": "NLP sprendimas dokumentų kokybei ir proceso nuoseklumui vertinti.",
+      "link": ""
+    },
+    {
+      "name": "Tinklo duomenų validavimas pagal žemųjų įtampų spintų schemas",
+      "summary": "Kompiuterinės regos sprendimas tinklo duomenų tikrinimui pagal pirminius brėžinius.",
+      "link": ""
+    }
+  ],
+  "certifications": [
+    "Generative AI with Large Language Models",
+    "AI for Everyone",
+    "Deep Learning Specialization",
+    "Machine Learning Specialization",
+    "Artificial Intelligence"
+  ]
+}
