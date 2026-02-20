@@ -44,11 +44,16 @@ python -m http.server 8000
 - Keep both files aligned by section and key names.
 - If source CV changes, replace `assets/cv/CV_A_Sosidko.pdf`, run `python scripts/extract_cv.py`, then review JSON output before commit.
 
-## Deployment (GitHub Pages)
-1. Push repository to GitHub.
-2. In repo settings, enable GitHub Pages.
-3. Set source branch to `master` (or your default branch) and root folder (`/`).
-4. Wait for Pages build and open the published URL.
+## Deployment (GitHub Pages via Actions)
+1. Push this repository to GitHub (workflow file: `.github/workflows/pages.yml`).
+2. Open repository settings: `Settings -> Pages`.
+3. In `Build and deployment`, set `Source` to `GitHub Actions`.
+4. Push to `master` (or run the workflow manually from `Actions` tab).
+5. After deploy finishes, open the Pages URL shown in `Settings -> Pages`.
+
+Expected URL format:
+- Project site: `https://<username>.github.io/<repo>/`
+- User site (`<username>.github.io` repo): `https://<username>.github.io/`
 
 ## QA Checklist
 - Language toggle switches EN/LT content.
