@@ -7,11 +7,31 @@
 };
 
 async function loadContent() {
-  const response = await fetch("content/cv.en.json");
-  if (!response.ok) {
-    throw new Error(`Unable to load content/cv.en.json: ${response.status}`);
+  const basePath = window.location.pathname.includes("/cv_website/")
+    ? "/cv_website/content/cv.en.json"
+    : "/content/cv.en.json";
+  const candidates = ["content/cv.en.json", "./content/cv.en.json", basePath];
+
+  let lastError = null;
+
+  for (const url of candidates) {
+    try {
+      const response = await fetch(url, { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      // Parse manually to tolerate UTF-8 BOM in JSON payloads.
+      const raw = await response.text();
+      const parsed = JSON.parse(raw.replace(/^\uFEFF/, ""));
+      state.content = parsed;
+      return;
+    } catch (error) {
+      lastError = new Error(`Failed loading ${url}: ${error.message}`);
+    }
   }
-  state.content = await response.json();
+
+  throw lastError || new Error("Unable to load CV content from known paths.");
 }
 
 function renderHero(profile, contact) {
@@ -245,5 +265,9 @@ async function init() {
 
 init().catch((error) => {
   console.error("Could not initialize CV website", error);
-  renderFatalError("The CV content file could not be loaded. Please verify content/cv.en.json.");
+  const hint =
+    window.location.protocol === "file:"
+      ? "Open the site via a local server (for example: python -m http.server 8000)."
+      : "Please verify content/cv.en.json and GitHub Pages deployment output.";
+  renderFatalError(`The CV content file could not be loaded. ${hint}`);
 });
