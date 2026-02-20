@@ -1,45 +1,20 @@
 ﻿const state = {
-  lang: "en",
-  data: { en: null, lt: null },
+  content: null,
   observers: {
     section: null,
     reveal: null
   }
 };
 
-function get(obj, path) {
-  return path.split(".").reduce((acc, part) => (acc ? acc[part] : undefined), obj);
-}
-
 async function loadContent() {
-  const fetchJson = async (url) => {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Unable to load ${url}: ${response.status}`);
-    }
-    return response.json();
-  };
-
-  const [en, lt] = await Promise.all([fetchJson("content/cv.en.json"), fetchJson("content/cv.lt.json")]);
-
-  state.data.en = en;
-  state.data.lt = lt;
+  const response = await fetch("content/cv.en.json");
+  if (!response.ok) {
+    throw new Error(`Unable to load content/cv.en.json: ${response.status}`);
+  }
+  state.content = await response.json();
 }
 
-function fillStaticLabels(content) {
-  document.querySelectorAll("[data-i18n]").forEach((node) => {
-    const key = node.getAttribute("data-i18n");
-    const value = get(content.ui, key);
-    if (value) {
-      node.textContent = value;
-    }
-  });
-
-  const linkedinLink = document.getElementById("linkedin-link");
-  linkedinLink.textContent = content.ui.labels.viewLinkedin;
-}
-
-function renderHero(profile) {
+function renderHero(profile, contact) {
   const hero = document.getElementById("hero");
   hero.innerHTML = `
     <div class="hero-copy" data-reveal>
@@ -47,6 +22,11 @@ function renderHero(profile) {
       <h1 id="name">${profile.name}</h1>
       <p class="title">${profile.title}</p>
       <p class="intro">${profile.summary}</p>
+      <ul class="hero-facts">
+        <li>Open to data science and AI opportunities</li>
+        <li><a href="mailto:${contact.email}">${contact.email}</a></li>
+        <li><a href="${contact.linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
+      </ul>
     </div>
     <figure class="hero-photo" data-reveal>
       <img src="${profile.photo.src}" alt="${profile.photo.alt}" loading="lazy" width="420" height="500">
@@ -62,7 +42,7 @@ function renderExperience(entries) {
         <article class="entry-card" data-reveal>
           <header>
             <h3>${item.role}</h3>
-            <p class="entry-meta">${item.company} · ${item.location}</p>
+            <p class="entry-meta">${item.company} | ${item.location}</p>
             <p class="entry-period">${item.period}</p>
           </header>
           <ul>
@@ -91,14 +71,10 @@ function renderEducation(entries) {
 
 function renderSkills(skills) {
   const container = document.getElementById("skills-groups");
-  const labels =
-    state.lang === "lt"
-      ? { technical: "Techniniai", tools: "Įrankiai", languages: "Kalbos" }
-      : { technical: "Technical", tools: "Tools", languages: "Languages" };
   const groups = [
-    { key: "technical", label: labels.technical },
-    { key: "tools", label: labels.tools },
-    { key: "languages", label: labels.languages }
+    { key: "technical", label: "Technical" },
+    { key: "tools", label: "Tools" },
+    { key: "languages", label: "Languages" }
   ];
 
   container.innerHTML = groups
@@ -173,11 +149,11 @@ function setupReveal() {
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.18 }
+    { threshold: 0.15 }
   );
 
   revealNodes.forEach((node, index) => {
-    node.style.setProperty("--delay", `${Math.min(index * 40, 320)}ms`);
+    node.style.setProperty("--delay", `${Math.min(index * 35, 280)}ms`);
     state.observers.reveal.observe(node);
   });
 }
@@ -212,7 +188,7 @@ function setupActiveNavTracking() {
         }
       });
     },
-    { threshold: [0.3, 0.6, 0.85], rootMargin: "-22% 0px -55% 0px" }
+    { threshold: [0.3, 0.6], rootMargin: "-22% 0px -56% 0px" }
   );
 
   sections.forEach((section) => state.observers.section.observe(section));
@@ -220,7 +196,6 @@ function setupActiveNavTracking() {
 
 function setupSmoothAnchorScrolling() {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", (event) => {
       const href = link.getAttribute("href");
@@ -238,25 +213,9 @@ function setupSmoothAnchorScrolling() {
         behavior: reduceMotion ? "auto" : "smooth",
         block: "start"
       });
-
       history.replaceState(null, "", href);
     });
   });
-}
-
-function updateLanguageControls(content) {
-  document.documentElement.lang = state.lang;
-  const langToggle = document.getElementById("lang-toggle");
-
-  if (state.lang === "en") {
-    langToggle.textContent = "LT";
-    langToggle.setAttribute("aria-label", "Switch to Lithuanian");
-  } else {
-    langToggle.textContent = "EN";
-    langToggle.setAttribute("aria-label", "Switch to English");
-  }
-
-  fillStaticLabels(content);
 }
 
 function renderFatalError(message) {
@@ -265,44 +224,26 @@ function renderFatalError(message) {
 }
 
 function render(content) {
-  renderHero(content.profile);
+  renderHero(content.profile, content.contact);
+  document.getElementById("profile-summary").textContent = content.profile.summary;
   renderExperience(content.experience);
   renderEducation(content.education);
   renderSkills(content.skills);
   renderProjects(content.projects);
   renderCertifications(content.certifications);
   renderContact(content.contact);
-  updateLanguageControls(content);
   setupReveal();
-}
-
-function setLanguage(lang) {
-  state.lang = lang;
-  localStorage.setItem("cv_lang", lang);
-
-  render(state.data[lang]);
-}
-
-function setupLanguageToggle() {
-  const toggle = document.getElementById("lang-toggle");
-  toggle.addEventListener("click", () => {
-    const next = state.lang === "en" ? "lt" : "en";
-    setLanguage(next);
-  });
 }
 
 async function init() {
   await loadContent();
-  setupLanguageToggle();
   setupSmoothAnchorScrolling();
   setupActiveNavTracking();
   document.getElementById("footer-year").textContent = String(new Date().getFullYear());
-
-  const saved = localStorage.getItem("cv_lang");
-  setLanguage(saved === "lt" ? "lt" : "en");
+  render(state.content);
 }
 
 init().catch((error) => {
   console.error("Could not initialize CV website", error);
-  renderFatalError("The CV content files could not be loaded. Please verify content JSON files.");
+  renderFatalError("The CV content file could not be loaded. Please verify content/cv.en.json.");
 });

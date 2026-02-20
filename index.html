@@ -7,7 +7,7 @@
   <title>Aleksejus Sosidko | Data Scientist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
   <script defer src="scripts/app.js"></script>
 </head>
@@ -20,16 +20,18 @@
 
   <header class="site-header" id="top">
     <div class="header-inner">
-      <a class="brand" href="#top" aria-label="Go to top">AS</a>
+      <div class="brand-block">
+        <a class="brand" href="#top" aria-label="Go to top">AS</a>
+        <p class="brand-text">Senior Data Scientist</p>
+      </div>
       <nav class="main-nav" aria-label="Primary">
-        <a href="#about" data-i18n="nav.about">About</a>
-        <a href="#experience" data-i18n="nav.experience">Experience</a>
-        <a href="#education" data-i18n="nav.education">Education</a>
-        <a href="#skills" data-i18n="nav.skills">Skills</a>
-        <a href="#projects" data-i18n="nav.projects">Projects</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <button id="lang-toggle" class="lang-toggle" type="button" aria-live="polite" aria-label="Switch to Lithuanian">LT</button>
     </div>
   </header>
 
@@ -37,42 +39,42 @@
     <section id="hero" class="section hero" aria-labelledby="name"></section>
 
     <section id="about" class="section section-panel" aria-labelledby="about-title">
-      <h2 id="about-title" data-i18n="sections.about">About</h2>
+      <h2 id="about-title">About</h2>
       <p id="profile-summary" class="lead-paragraph"></p>
     </section>
 
     <section id="experience" class="section section-panel" aria-labelledby="experience-title">
-      <h2 id="experience-title" data-i18n="sections.experience">Experience</h2>
+      <h2 id="experience-title">Experience</h2>
       <div id="experience-list" class="stack"></div>
     </section>
 
     <section id="education" class="section section-panel" aria-labelledby="education-title">
-      <h2 id="education-title" data-i18n="sections.education">Education</h2>
+      <h2 id="education-title">Education</h2>
       <div id="education-list" class="stack"></div>
     </section>
 
     <section id="skills" class="section section-panel" aria-labelledby="skills-title">
-      <h2 id="skills-title" data-i18n="sections.skills">Skills</h2>
+      <h2 id="skills-title">Skills</h2>
       <div id="skills-groups" class="skills-grid"></div>
     </section>
 
     <section id="projects" class="section section-panel" aria-labelledby="projects-title">
-      <h2 id="projects-title" data-i18n="sections.projects">Projects</h2>
+      <h2 id="projects-title">Projects</h2>
       <div id="projects-list" class="stack"></div>
     </section>
 
     <section id="certifications" class="section section-panel" aria-labelledby="certifications-title">
-      <h2 id="certifications-title" data-i18n="sections.certifications">Certifications</h2>
+      <h2 id="certifications-title">Certifications</h2>
       <div id="certifications-list" class="stack"></div>
     </section>
 
     <section id="contact" class="section section-panel contact" aria-labelledby="contact-title">
-      <h2 id="contact-title" data-i18n="sections.contact">Contact</h2>
+      <h2 id="contact-title">Contact</h2>
       <p id="contact-text" class="lead-paragraph"></p>
       <div class="contact-actions">
-        <a id="email-link" class="button" href="#" data-i18n="actions.email">Email</a>
+        <a id="email-link" class="button" href="#">Email</a>
         <a id="linkedin-link" class="button button-secondary" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a id="cv-download" class="button" href="assets/cv/CV_A_Sosidko.pdf" download data-i18n="actions.downloadCv">Download CV</a>
+        <a id="cv-download" class="button" href="assets/cv/CV_A_Sosidko.pdf" download>Download CV</a>
       </div>
     </section>
   </main>

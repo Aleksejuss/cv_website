@@ -1,18 +1,17 @@
 ﻿# CV Website
 
-Bilingual (EN/LT) static CV website for Aleksejus Sosidko.
+Professional English-only static CV website for Aleksejus Sosidko.
 
 ## Stack
 - Static `HTML/CSS/JS`
-- JSON content files (`content/cv.en.json`, `content/cv.lt.json`)
+- JSON content file (`content/cv.en.json`)
 - PDF extraction script (`scripts/extract_cv.py` with `pypdf`)
 
 ## Project Structure
 - `index.html` - single-page layout with semantic sections
 - `styles/main.css` - visual system, layout, responsive rules, motion
-- `scripts/app.js` - data loading, rendering, language toggle, nav interactions
+- `scripts/app.js` - data loading, rendering, nav interactions
 - `content/cv.en.json` - English structured content
-- `content/cv.lt.json` - Lithuanian structured content
 - `content/cv_extracted_raw.txt` - normalized extracted raw PDF text
 - `scripts/extract_cv.py` - extraction and normalization pipeline
 - `assets/cv/CV_A_Sosidko.pdf` - downloadable CV
@@ -40,8 +39,6 @@ python -m http.server 8000
 ## Editing Content
 - Update structured content directly in:
   - `content/cv.en.json`
-  - `content/cv.lt.json`
-- Keep both files aligned by section and key names.
 - If source CV changes, replace `assets/cv/CV_A_Sosidko.pdf`, run `python scripts/extract_cv.py`, then review JSON output before commit.
 
 ## Deployment (GitHub Pages via Actions)
@@ -56,7 +53,6 @@ Expected URL format:
 - User site (`<username>.github.io` repo): `https://<username>.github.io/`
 
 ## QA Checklist
-- Language toggle switches EN/LT content.
 - Nav anchors scroll to expected sections.
 - Active nav item updates while scrolling.
 - CV download button works.

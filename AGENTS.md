@@ -1,22 +1,21 @@
 ﻿# AGENTS.md
 
 ## Purpose
-This repository hosts a bilingual static CV website. Agents should preserve content quality, accessibility, and deployment simplicity.
+This repository hosts an English-only static CV website. Agents should preserve content quality, accessibility, and deployment simplicity.
 
 ## Architecture
 - `index.html` contains all sections and semantic structure.
 - `scripts/app.js` owns runtime behavior:
-  - EN/LT content loading
-  - language toggle + persistence
+  - English content loading
   - section rendering
   - reveal animations
   - active navigation state
 - `styles/main.css` defines visual tokens and responsive layout.
-- `content/*.json` is the source of rendered profile data.
+- `content/cv.en.json` is the source of rendered profile data.
 
 ## Agent Rules
 - Keep the site static (no backend/framework unless explicitly requested).
-- Preserve bilingual parity: any schema/content changes must be mirrored in both `cv.en.json` and `cv.lt.json`.
+- Keep content changes in `content/cv.en.json` consistent with the rendered section schema.
 - Keep accessibility intact:
   - semantic headings/landmarks
   - keyboard-focus visibility
@@ -27,7 +26,7 @@ This repository hosts a bilingual static CV website. Agents should preserve cont
 ## Content Update Workflow
 1. Replace PDF at `assets/cv/CV_A_Sosidko.pdf` (if needed).
 2. Run `python scripts/extract_cv.py` in `cv_website` env.
-3. Manually review and refine both JSON files.
+3. Manually review and refine `content/cv.en.json`.
 4. Validate website behavior locally via `python -m http.server 8000`.
 5. Commit with clear milestone-style commit messages.
 
@@ -40,5 +39,5 @@ Use intent-focused commits, for example:
 
 ## Validation Before Finalizing Changes
 - `node --check scripts/app.js`
-- Manually verify language toggle, nav tracking, and CV download link.
+- Manually verify nav tracking and CV download link.
 - Confirm responsive behavior around mobile and desktop breakpoints.
